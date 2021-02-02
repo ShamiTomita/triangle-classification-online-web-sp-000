@@ -12,9 +12,9 @@ class Triangle
     #given 3 sides, this method should return what type of triangle is being inputted
     #the boundaries of this should be that all sides must be larger than 0 and that two sides of a triangle must exceed the length of the third 
     if side1 <= 0 || side2 <= 0 || side3 <=0 #if any side is less than or equal to 0, raise an error 
-    
+      raise TriangleError
     elsif (side1 + side2 < side3) || (side3 + side1 < side2) || (side2 + side3 < side1) #triangle inequality check, raise error
-    
+    raise TriangleError
     elsif (side1 == side2 && side1 != side3) || (side1 == side3 && side1 != side2) || (side2 == side3 && side2 != side1)
       return :iscoceles
       
