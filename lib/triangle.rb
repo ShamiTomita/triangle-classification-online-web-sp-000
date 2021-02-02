@@ -15,34 +15,16 @@ class Triangle
     elsif (side1 + side2 < side3) || (side3 + side1 < side2) || (side2 + side3 < side1) #triangle inequality check, raise error
     
     elsif (side1 == side2 && side1 != side3) || (side1 == side3 && side1 != side2) || (side2 == side3 && side2 != side1)
-      
       return :iscoceles
       
     elsif (side1 == side2 && side1 == side3)
-    return :equilateral 
+      return :equilateral 
     
-    elsif (side1 != side2 )
-      
+    elsif (side1 != side2 && side2 != side3 && side1 != side3)
+      return :scalene
+   end
   end 
   
-  
-  
-  
-  
-  def kind(side1, side2, side3)
-    if side1 <= 0 || side2 <= 0 || side3 <=0
-      begin 
-        raise TriangleError
-          rescue TriangleError => error 
-        puts error.message
-      end 
-    elsif side1 == side2 && side2 == side3 
-      return :equiliateral
-    elsif (side1 == side2 && side2 != side3) || (side1 == side2 && side1 != side3)
-        return :isosceles
-      end 
-    end 
-  end 
   
   class TriangleError < StandardError
    def message
