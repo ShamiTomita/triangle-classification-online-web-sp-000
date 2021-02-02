@@ -25,6 +25,7 @@ class Triangle
       return :scalene
     end
   end 
+  
   class TriangleError < StandardError
    def message
      "a side of a triangle can not be 0...or less than 0 for that matter."
