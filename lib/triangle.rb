@@ -16,7 +16,7 @@ class Triangle
     elsif (side1 + side2 < side3) || (side3 + side1 < side2) || (side2 + side3 < side1) #triangle inequality check, raise error
     raise TriangleError
     elsif (side1 == side2 && side1 != side3) || (side1 == side3 && side1 != side2) || (side2 == side3 && side2 != side1)
-      return :iscosceles
+      return :isosceles
       
     elsif (side1 == side2 && side1 == side3)
       return :equilateral 
